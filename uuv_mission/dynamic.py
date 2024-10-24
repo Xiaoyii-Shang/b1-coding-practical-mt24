@@ -106,5 +106,6 @@ class ClosedLoop:
         return Trajectory(positions)
         
     def simulate_with_random_disturbances(self, mission: Mission, variance: float = 0.5) -> Trajectory:
-        disturbances = np.random.normal(0, variance, len(mission.reference))
+        disturbances = np.random.normal(0, variance, 100)
+        #, len(mission.reference))
         return self.simulate(mission, disturbances)

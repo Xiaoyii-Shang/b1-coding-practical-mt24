@@ -15,7 +15,7 @@ class Mission:
         """
         # Load the CSV file into a pandas DataFrame
         df = pd.read_csv(file_path)
-        
+
         # Create a list to store Mission instances
         missions = []
         
@@ -35,9 +35,10 @@ class Mission:
     def __repr__(self):
         return f"Mission(reference='{self.reference}', cave_height={self.cave_height}, cave_depth={self.cave_depth})"
 
-# Example usage
-file_path = 'mission.csv'
-mission_instances = Mission.from_csv(file_path)
 
-for mission in mission_instances:
-    print(mission)
+# # Example usage
+# file_path = '../data/mission.csv'
+# mission_instances = Mission.from_csv(file_path)
+
+# for mission in mission_instances:
+#     print(mission)
